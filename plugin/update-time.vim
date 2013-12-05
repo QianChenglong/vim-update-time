@@ -1,7 +1,7 @@
 " File: update-time.vim
 " Author: QianChenglong <qianchenglong2012@gmail.com>
 " Create Time: 2013-12-04 19:36:21 CST
-" Last Change: 2013-12-04 21:54:32 CST
+" Last Change: 2013-12-05 12:14:15 CST
 " Description: Automatic update Last Change time
 
 " SECTION: Init"{{{
@@ -50,6 +50,10 @@ fun Update_time_update()
         return
     endif
     if ! s:update_time_enable
+        return
+    endif
+    let bufmodified = getbufvar('%', '&mod')
+    if ! bufmodified
         return
     endif
     let pos = line('.').' | normal! '.virtcol('.').'|'
