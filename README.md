@@ -2,6 +2,8 @@
 
 Automatic update Last Change time as you like!
 
+[New version](https://github.com/QianChenglong/vim-update-time)
+
 ## Command
 
 - Toggle update time
